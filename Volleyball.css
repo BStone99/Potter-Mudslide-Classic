@@ -1,0 +1,181 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Poppins&display=swap');
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: rgba(0,0,0,0.85);
+    color: #fff;
+  background-image: url("12 inch logo_no background.png");
+  background-size: contain;      /* Keep logo proportions */
+  background-repeat: no-repeat;  /* Prevent tiling */
+  background-position: center top; /* Position at the top center */
+  background-attachment: fixed;  /* Keeps it in place on scroll */
+
+}
+
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+	display:flex;
+	justify-content: center;
+	padding: 0;
+	background-color: black;
+	border-bottom: 2px solid teal;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FFD700;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: teal;
+}
+
+header h1, h2 {
+    font-family: 'Chewy', Arial, sans-serif;
+    color: teal;
+    border-bottom: 3px solid teal;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+form, .payment-section, #sponsors {
+    background-color: rgba(34, 34, 34, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px teal;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 2px solid #FFD700;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+}
+
+input[type="submit"] {
+    background-color: teal;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #FFD700;
+    color: #000;
+}
+
+.payment-method {
+    background-color: #222;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px teal;
+    margin: 10px;
+    color: white;
+}
+
+#sponsors {
+
+    background-color: #fff;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    margin: 20px auto;
+
+    max-width: 800px;
+
+    color: #000;
+
+}
+
+
+.sponsor-logos {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 15px;
+
+}
+
+
+
+.sponsor-logos img {
+
+    max-height: 100px;
+
+    background-color: #fff;
+
+    padding: 5px;
+
+    border-radius: 5px;
+
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #fff;
+}
+.prize-banner {
+    position: fixed;
+    top: 150px;
+    right: 0;
+    background-color: teal;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 10px 0 0 10px;
+    box-shadow: -2px 2px 10px #FFD700;
+    font-family: 'Chewy', Arial, sans-serif;
+    font-size: 1.2em;
+    z-index: 1000;
+    width: 220px;
+    text-align: center;
+}
+.prize-banner strong {
+    color: #FFD700;
+    font-size: 1.4em;
+}
+.qr-small{
+	max-height: 100px;
+}
+.overlay {
+
+  background-color: rgba(0, 0, 0, 0.85); /* black with transparency */
+
+  min-height: 100vh;
+
+  padding: 20px;
+
+}
+.submit-button{
+	display: inline-block;
+}
+.qr image{
+	width: 50px;
+	max-width:100%;
+	border-radius: 8px;
+	border:2px solide white;
+	margin-top:10px;
+}

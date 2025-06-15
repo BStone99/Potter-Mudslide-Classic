@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Potter Mudslide Classic – Home</title>
+    <link rel="stylesheet" href="Volleyball.css">
+</head>
+<body>
+    <nav>
+        <ul>
+			<li><a href="About.html">About</a></li>
+            <li><a href="Registration.html">Game Info</a></li>
+            <li><a href="Potter Mudslide Classic_Home.html">Register</a></li>
+        </ul>
+    </nav>
+	<div class="prize-banner">
+		<p><strong>$800 CASH PRIZE!</strong><br>
+		Plus merchandise for 1st, 2nd, and 3rd place!</p>
+	</div>
+	<div class="overlay">
+	<!-- Your content goes here -->
+    <header>
+        <h1>Welcome to the Potter Mudslide Classic!</h1>
+    </header>
+    <main>
+        <h2>Get Ready to Battle in the Mud!</h2>
+        <ul>
+            <li>6x6 Co-ed.</li>
+			<li>3 guys on the court at a time.</li>
+			<li>Each match is one set.</li>
+            <li>Double elimination format.</li>
+			<li>Ref is the final say in ALL calls made.</li>
+			<li>Rally scoring.</li>
+			<li>Registration opens June 15, 2025 and closes July 31, 2025.</li>
+        </ul>
+        <h2>Stay Close to the Action — Camp On-Site!</h2>
+        <p>On-site camping is available the night before and the night of the event.<br>
+        Contact Brandy Stone at <a href="tel:3082495637">308-249-5637</a> for reservations.</p>
+		<p>Camp site opens 4 PM the night before the games and closes at 9 AM the morning after the games.</p>
+		<p>You must book your camp site in advance.</p>
+        <h2>The Countdown Begins!</h2>
+        <p id="countdown">Tournament begins on August 9th, 2025 at 8:00 AM.</p>
+    </main>
+	<section id="schedule">
+
+    <h2>Game Day Schedule</h2>
+
+    <table class="schedule-table">
+
+        <tr>
+            <th>Time</th>
+            <th>Event</th>
+        </tr>
+
+        <tr>
+            <td>7:00 AM</td>
+            <td>Check-in Opens & Team Warm-ups</td>
+        </tr>
+
+        <tr>
+            <td>7:30 AM</td>
+            <td>Captain's Meeting</td>
+        </tr>
+
+        <tr>
+            <td>8:00 AM</td>
+            <td>Games Begin (Double Elimination)</td>
+        </tr>
+
+        <tr>
+            <td>7:00 PM (approx.)</td>
+            <td>Championship Match & Awards to Follow</td>
+        </tr>
+
+        <tr>
+            <td>After Finals</td>
+            <td>Evening Social & Camping Available</td>
+        </tr>
+
+    </table>
+      <p>Note: We do not break for lunch, but there will be food vendors on site for players between matches.</p>
+</section>
+
+
+    <section id="sponsors">
+        <h2>Our Gold Sponsors</h2>
+        <div class="sponsor-logos">
+            <img src="chuckaboostation_logo.png" alt="Sponsor 1">
+            <img src="SafeAtHome.jpg" alt="Sponsor 2">
+            <img src="Wireless World.jpg" alt="Sponsor 3">
+			<img src="WHITE ROCK PINEAPPLE COMPANY.jpg" alt="Sponsor 4">
+        </div>
+    </section>
+	
+	<section id="sponsors">
+        <h2>Our Silver Sponsors</h2>
+        <div class="sponsor-logos">
+            <img src="SRMC.png" alt="Sponsor 1" style="width:160px; height:30; border-radius:8px">
+			<img src="nexgen_logo.png" alt="Sponsor 2">
+        </div>
+    </section>
+	
+    <footer>&copy; 2025 Potter Mudslide Classic</footer>
+    <script>
+    var countDownDate = new Date("August 9, 2025 08:00:00").getTime();
+    var x = setInterval(function() {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("countdown").innerHTML = "The tournament is underway!";
+            return;
+        }
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        document.getElementById("countdown").innerHTML =
+            days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds";
+    }, 1000);
+    </script>
+	</div>
+</body>
+</html>

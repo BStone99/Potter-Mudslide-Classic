@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Potter Mudslide Classic – Home</title>
+    <link rel="stylesheet" href="Volleyball.css">
+</head>
+<body>
+  <nav>
+    <ul>
+
+      <li><a href="About.html">About</a></li>
+      <li><a href="Registration.html">Game Info</a></li>
+	  <li><a href="Registration.html">Register</a></li>
+
+    </ul>
+  </nav>
+  <main class="content-box">
+    <h1>Mudslide Classic Registration</h1>
+    <form id="registrationForm" action="https://script.google.com/macros/s/AKfycbxmnB8vSB6Qp_iG-tbb7L_4BjID79WRlybH9ZTADmICmUEohQaOYhkUw0o8R1TZ_aCSaA/exec" method="POST">
+      <label>Team Name:</label>
+      <input type="text" name="teamName" required>
+
+      <label>Captain Name:</label>
+      <input type="text" name="captainName" required>
+
+      <label>Email Address:</label>
+      <input type="email" name="email" required>
+
+      <label>Phone Number:</label>
+      <input type="tel" name="phone" required>
+
+      <label>Payment Method:</label>
+      <select name="paymentMethod" required>
+        <option value="" disabled selected>Select one</option>
+        <option value="Venmo">Venmo</option>
+        <option value="PayPal">PayPal</option>
+        <option value="Check">Mail a Check</option>
+      </select>
+	  <p>See below for the payment method QR codes and information.</p>
+
+      <label>
+        <input type="checkbox" name="paymentConfirmed" value="Yes" required>
+        I have submitted payment via the selected method.
+      </label>
+
+      <button type="submit">Register Team</button>
+    </form>
+
+    <div class="payment-options">
+      <h2>Payment Options</h2>
+      <p><strong>Venmo:</strong> @Brandy-Stone-43 — Send $203.90<br>
+         <img src="venmo_qrcode.jpg" alt="Venmo QR Code" class="qr image" style="width:120px; border-radius:8px"</p>
+      <p><strong>PayPal:</strong> Send $207 to cover fees<br>
+         <img src="brandy_paypal_qrcode.jpg" alt="PayPal QR Code" class="qr image" style="width:120px; border-radius:8px"</p>
+      <p><strong>Mail a Check:</strong><br>
+         Payable to: Potter Mudslide Classic<br>
+         3272 Road 83, Potter, NE 69156</p>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('registrationForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const form = e.target;
+      const formData = new FormData(form);
+      fetch(form.action, {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.text())
+      .then(result => {
+        if (result.toLowerCase().includes("success")) {
+          window.location.href = 'successful registration.html';
+        } else {
+          alert("Something went wrong. Please try again.");
+        }
+      })
+      .catch(err => {
+        alert("Error: " + err.message);
+      });
+    });
+  </script>
+</body>
+</html>
